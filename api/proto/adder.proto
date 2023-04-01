@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+
+option go_package = "./grpstest";
+package api;
+
+service ShippingService {
+  rpc CreateToken(Aunt) returns (Token) {}
+}
+
+
+message Aunt{
+  string login = 1;
+  string password = 2;
+}
+
+message Token{
+  string token = 1;
+}
